@@ -3,11 +3,12 @@
 <div>
 
     <div>
-        <span>id : {{ hero.id }}</span>
+        <span>id: {{ hero.id }}</span>
     </div>
 
     <div>
-        <span>name: {{ hero.name }}</span>
+        <label for='name'>Hero name: </label>
+        <input id='name' [(ngModel)]="hero.name" placeholder='name'>
     </div>
 
 </div>
