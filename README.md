@@ -1,5 +1,22 @@
 # AngularTourOfHeroes
 
+<div>
+  <div>
+    Auteur : Thibault Pares
+  </div>
+  <div>
+    Date : 19/12/2021 - 20/12/2021
+  </div>
+  <div>
+    <a href="https://angular.io/tutorial" target="_blank">Source du tutoriel - site officiel d'Angular</a>
+  </div>
+  <div>
+    Objectif : approfondir ma connaissance d'Angular par la pratique.
+  </div>
+</div>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
