@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { HEROES } from '../mock-heroes';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -9,16 +9,23 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes = HEROES;
+  heroes: Hero[] = [];
   selectedHero?: Hero;
 
-  constructor() { }
+  // bonnes pratiques : "Reserve the constructor for minimal initialization such as wiring constructor parameters to properties"
+  // -> le constructeur ne doit rien faire (pas d'appel de méthodes)
+  constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
+    this.getHeroes();
   }
 
   onSelect(hero: Hero) {
     this.selectedHero = hero;
   };
+
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
 
 }
