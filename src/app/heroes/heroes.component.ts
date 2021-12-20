@@ -24,8 +24,11 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = hero;
   };
 
+  // la méthode attend que l' Observable<Hero[]> émette le tableau de Hero
+  // pour pouvoir ensuite initialiser la propriété heroes du composant
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
   }
 
 }
